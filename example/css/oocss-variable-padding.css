@@ -1,247 +1,94 @@
-/* SINGULARITY -- http://singularity.gs/ */
-/* line 41, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-1, .a0-2, .a0-3, .a0-4, .a0-5, .a1-2, .a1-3, .a1-4, .a1-5, .a2-3, .a2-4, .a2-5, .a3-4, .a3-5, .a4-5 {
-  margin-right: -100%;
-  float: left;
-  float: left;
-  padding: 0 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-right: 2%;
-}
+/*
+Syntax error: Undefined variable: "$span".
+        on line 50 of /Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss, in `grid-structure-shared'
+        from line 50 of /Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss, in `grid-objects'
+        from line 13 of /Users/scottkellum/Sites/Singularity/framework/example/sass/oocss-variable-padding.scss
 
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-1 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 8.69565%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-2 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 34.78261%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 0;
-  padding-left: 1em;
-  padding-right: 5%;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-3 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 56.52174%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 0;
-  padding-left: 1em;
-  padding-right: 10px;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-4 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 86.95652%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a0-5 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a1-2 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 17.3913%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 17.3913%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a1-3 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 39.13043%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 17.3913%;
-  padding-left: 5%;
-  padding-right: 10px;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a1-4 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 69.56522%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 17.3913%;
-  padding-left: 5%;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a1-5 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 82.6087%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 5%;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a2-3 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 13.04348%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 43.47826%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a2-4 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 43.47826%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 43.47826%;
-  padding-left: 10px;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a2-5 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 56.52174%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 10px;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a3-4 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 21.73913%;
-  margin-right: -100%;
-  float: left;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  margin-left: 65.21739%;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a3-5 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 34.78261%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-/* line 62, ../../stylesheets/singularitygs/_mixins.scss */
-.a4-5 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 4.34783%;
-  float: right;
-  margin-right: 0;
-  clear: right;
-  overflow: hidden;
-  *zoom: 1;
-  padding-left: 1em;
-  padding-right: 1em;
-}
+Backtrace:
+/Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss:50:in `grid-structure-shared'
+/Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss:50:in `grid-objects'
+/Users/scottkellum/Sites/Singularity/framework/example/sass/oocss-variable-padding.scss:13
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:255:in `block in visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:255:in `map'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:255:in `visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block (3 levels) in visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `map'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block (2 levels) in visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:264:in `block in visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:68:in `perform_arguments'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:259:in `visit_mixin'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `block in modified'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `block in run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/bin/compass:19:in `load'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/bin/compass:19:in `<main>'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/scottkellum/.rvm/gems/ruby-1.9.2-p320@singularity/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$span\".\A         on line 50 of /Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss, in `grid-structure-shared'\A         from line 50 of /Users/scottkellum/Sites/Singularity/framework/stylesheets/singularitygs/_mixins.scss, in `grid-objects'\A         from line 13 of /Users/scottkellum/Sites/Singularity/framework/example/sass/oocss-variable-padding.scss"; }
