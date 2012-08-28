@@ -1,40 +1,44 @@
 // Grid location is automatically counted unless overridden
 $grid-counter: 1;
 
-@mixin grid-span($span, $location: $grid-counter, $columns: $columns, $gutter: $gutter, $padding: $padding) {
-  @include box-sizing(border-box);
-  width: grid-span($span, $location, $columns, $gutter);
-  @if $grid-structure == float {
-    @include structure-float($span, $location, $columns, $gutter);
-  }
-  // add special left padding
-  @if type-of($columns) == list {
-    @if type-of(nth($columns, $location)) == list {
-      padding-left: nth(nth($columns, $location), 2);
+@mixin grid-span($span, $location: $grid-counter, $columns: $columns, $gutter: $gutter, $padding: $padding, $compound-grid: false) {
+  $work-column: find-compound-grid($columns, $compound-grid);
+  
+  @if $work-column {
+    @include box-sizing(border-box);
+    width: grid-span($span, $location, $work-column, $gutter, $compound-grid: $compound-grid);
+    @if $grid-structure == float {
+      @include structure-float($span, $location, $work-column, $gutter, $compound-grid: $compound-grid);
+    }
+    // add special left padding
+    @if type-of($work-column) == list {
+      @if type-of(nth($work-column, $location)) == list {
+        padding-left: nth(nth($work-column, $location), 2);
+      }
+      @else if $padding != 0 {
+        padding-left: $padding;
+      }
+      // add special right padding
+      @if type-of(nth($work-column, $location + $span - 1)) == list {
+        padding-right: nth(nth($work-column, $location + $span - 1), 2);
+      }
+      @else if $padding != 0 {
+        padding-right: $padding;
+      }
     }
     @else if $padding != 0 {
-      padding-left: $padding;
+      padding: 0 $padding;
     }
-    // add special right padding
-    @if type-of(nth($columns, $location + $span - 1)) == list {
-      padding-right: nth(nth($columns, $location + $span - 1), 2);
+    // bump up the counter
+    $grid-counter: $location + $span;
+    @if $grid-counter > column-count($work-column) {
+      $grid-counter: 1;
     }
-    @else if $padding != 0 {
-      padding-right: $padding;
-    }
-  }
-  @else if $padding != 0 {
-    padding: 0 $padding;
-  }
-  // bump up the counter
-  $grid-counter: $location + $span;
-  @if $grid-counter > column-count($columns) {
-    $grid-counter: 1;
   }
 }
 
 // This writes classes, IDs, or silent objects for you to extend or use in your HTML. They can be written to different breakpoints to extend or call into your HTML as needed.
-@mixin grid-objects($prefix: a, $columns: $columns, $gutter: $gutter, $padding: $padding, $selector: "%") {
+@mixin grid-objects($prefix: a, $columns: $columns, $gutter: $gutter, $padding: $padding, $compound-grid: false, $selector: "%") {
   $grouped-styles: true;
   // counter keeps track of the starting position
   $count: 0;
@@ -61,7 +65,7 @@ $grid-counter: 1;
     @for $n from $count + 1 through column-count($columns) {
       #{$selector}#{$prefix}#{$count}-#{$n} {
         @extend %#{$prefix}column;
-        @include grid-span($n - $count, $count + 1, $columns, $gutter);
+        @include grid-span($n - $count, $count + 1, $columns, $gutter, $compound-grid);
       }
     }
     $count: $count + 1;

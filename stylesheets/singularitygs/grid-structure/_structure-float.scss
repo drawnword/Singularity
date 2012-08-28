@@ -12,80 +12,59 @@
   @include clearfix;
 }
 
-@mixin structure-float($span, $location: $grid-counter, $columns: $columns, $gutter: $gutter, $grouped-styles: false) {
+@mixin structure-float($span, $location: $grid-counter, $columns: $columns, $gutter: $gutter, $grouped-styles: false, $compound-grid: false) {
   
-  $grid-location: '';
+  $work-column: find-compound-grid($columns, $compound-grid);
   
-  @if ($span + $location) > column-count($columns) {
-    $grid-location: 'last';
-  }
-  @else if $location == 1 {
-    $grid-location: 'first';
-  }
-  @else if $location == column-count($columns) {
-    $grid-location: 'last';
-  }
-  @else {
-    $grid-location: 'middle';
-  }
-  
-  @if $dir == ltr or $dir == both {
-    @if $grid-location == 'middle' {
-      @if $grouped-styles == false {
-        margin-right: -100%;
-        float: left;
+  @if $work-column {
+    $grid-location: '';
+
+    @if ($span + $location) > column-count($work-column) {
+      $grid-location: 'last';
+    }
+    @else if $location == 1 {
+      $grid-location: 'first';
+    }
+    @else if $location == column-count($work-column) {
+      $grid-location: 'last';
+    }
+    @else {
+      $grid-location: 'middle';
+    }
+
+    @if $dir == ltr or $dir == both {
+      @if $grid-location == 'middle' {
+        @if $grouped-styles == false {
+          margin-right: -100%;
+          float: left;
+          @include grid-clear('left');
+        }
+        margin-left: grid-span($location - 1, 1, $work-column, $gutter, $compound-grid: $compound-grid) + gutter-span($gutter, $work-column);
+      }
+      @else if $grid-location == 'first' {
+        @if $grouped-styles == false {
+          margin-right: -100%;
+          float: left;
+          @include grid-clear('left');
+        }
+        margin-left: 0;
+      }
+      @else if $grid-location == 'last' {
+        float: right;
+        margin-right: 0;
         @include grid-clear('left');
       }
-      margin-left: grid-span($location - 1, 1, $columns, $gutter) + gutter-span($gutter, $columns);
     }
-    @else if $grid-location == 'first' {
-      @if $grouped-styles == false {
-        margin-right: -100%;
-        float: left;
-        @include grid-clear('left');
-      }
-      margin-left: 0;
-    }
-    @else if $grid-location == 'last' {
-      float: right;
-      margin-right: 0;
-      @include grid-clear('left');
-    }
-  }
-  @if $dir == rtl {
-    @if $grid-location == 'middle' {
-      @if $grouped-styles == false {
-        margin-left: -100%;
-        float: right;
-        @include grid-clear('right');
-      }
-      margin-right: grid-span($location - 1, 1, $columns, $gutter) + gutter-span($gutter, $columns);
-    }
-    @else if grid-location == 'first' {
-      @if $grouped-styles == false {
-        margin-left: -100%;
-        float: right;
-        @include grid-clear('right');
-      }
-      margin-right: 0;
-    }
-    @else if $grid-location == 'last' {
-      float: left;
-      margin-left: 0;
-      @include grid-clear('right');
-    }
-  }
-  @if $dir == both {
-    #{$rtl-selector} & {
+    @if $dir == rtl {
       @if $grid-location == 'middle' {
         @if $grouped-styles == false {
           margin-left: -100%;
           float: right;
           @include grid-clear('right');
         }
-        margin-right: grid-span($location - 1, 1, $columns, $gutter) + gutter-span($gutter, $columns);
+        margin-right: grid-span($location - 1, 1, $work-column, $gutter, $compound-grid: $compound-grid) + gutter-span($gutter, $work-column);
       }
-      @if $grid-location == 'first' {
+      @else if grid-location == 'first' {
         @if $grouped-styles == false {
           margin-left: -100%;
           float: right;
@@ -93,10 +72,35 @@
         }
         margin-right: 0;
       }
-      @if $grid-location == 'last' {
+      @else if $grid-location == 'last' {
         float: left;
         margin-left: 0;
         @include grid-clear('right');
+      }
+    }
+    @if $dir == both {
+      #{$rtl-selector} & {
+        @if $grid-location == 'middle' {
+          @if $grouped-styles == false {
+            margin-left: -100%;
+            float: right;
+            @include grid-clear('right');
+          }
+          margin-right: grid-span($location - 1, 1, $work-column, $gutter, $compound-grid: $compound-grid) + gutter-span($gutter, $work-column);
+        }
+        @if $grid-location == 'first' {
+          @if $grouped-styles == false {
+            margin-left: -100%;
+            float: right;
+            @include grid-clear('right');
+          }
+          margin-right: 0;
+        }
+        @if $grid-location == 'last' {
+          float: left;
+          margin-left: 0;
+          @include grid-clear('right');
+        }
       }
     }
   }

@@ -11,28 +11,32 @@
 //}
 
 // Calculate the width spanning multiple columns
-@function column-span($span, $location: 1, $columns: $columns) {
-  $columns-and-gutters: column-sum($columns, $gutter);
+@function column-span($span, $location: 1, $columns: $columns, $compound-grid: false) {
+  $work-column: find-compound-grid($columns, $compound-grid);
+  
+  @if not $work-column {
+    @return false;
+  }
+  
+  $columns-and-gutters: column-sum($work-column, $gutter);
   
   // Equal width columns
-  @if type-of($columns) == number {
+  @if type-of($work-column) == number {
     $span-and-gutter: $span + (($span - 1) * $gutter);
     @return $span-and-gutter / $columns-and-gutters * 100%;
   }
   // Variable width columns
-  @if type-of($columns) == list {
+  @if type-of($work-column) == list {
       // zero out initial sum
       $sum: 0;
       $holder: ();
       // from start point to end point
       @for $i from $location to $location + $span {
-        $holder: append($holder, nth(nth($columns, $i), 1), comma);
+        $holder: append($holder, nth(nth($work-column, $i), 1), comma);
       }
       
       @return column-sum($holder, $gutter) / $columns-and-gutters * 100%;
   }
-  
-  @return 10%;
 }
 
 @function column-sum($columns: $columns, $gutter: $gutter) {

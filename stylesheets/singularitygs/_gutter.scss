@@ -1,11 +1,17 @@
 // Gutters to be removed from columns
-@function gutter-offset($gutter, $columns) {
-  $gutter-sum: $gutter * (column-count($columns) - 1);
-  @return $gutter-sum / column-count($columns);
+@function gutter-offset($gutter, $columns, $compound-grid: false) {
+  $work-column: find-compound-grid($columns, $compound-grid);
+  
+  @if not $work-column {
+    @return false;
+  }
+  
+  $gutter-sum: $gutter * (column-count($work-column) - 1);
+  @return $gutter-sum / column-count($work-column);
 }
 
-@function gutter-span($gutter, $columns) {
-  $columns-and-gutters: column-sum($columns, $gutter);
+@function gutter-span($gutter, $work-column) {
+  $columns-and-gutters: column-sum($work-column, $gutter);
   
   @return $gutter / $columns-and-gutters * 100%;
 }

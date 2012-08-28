@@ -22,5 +22,30 @@
 
 // Pull in grid stops to make a background gradient
 @mixin background-grid($columns: $columns, $gutter: $gutter, $color: rgba(#69aedb, 0.5)) {
-  @include background(linear-gradient(left, grid-gradient-stops($columns, $gutter, $color)));
+  @if is-compound($columns) {
+    $length: length($columns);
+    $index: index($columns, 'compound');
+    $alpha: 1 / ($length - 1);
+    $color: rgba($color, 1);
+    $color: rgba($color, $alpha);
+    $gradient: ();
+    @if $index == 1 {
+      @for $i from 2 through $length {
+        $gradient: join($gradient, linear-gradient(left, grid-gradient-stops(nth($columns, $i), $gutter, $color)), comma);
+      }
+      @include background($gradient);
+    }
+    @if $index == $length {
+      @for $i from 1 to $length {
+        $gradient: join($gradient, linear-gradient(left, grid-gradient-stops(nth($columns, $i), $gutter, $color)), comma);
+      }
+      @include background($gradient);
+    }
+    @else {
+      @warn 'Compound declaration must either be the first or last in the list';
+    }
+  }
+  @else {
+    @include background(linear-gradient(left, grid-gradient-stops($columns, $gutter, $color)));
+  }
 }
